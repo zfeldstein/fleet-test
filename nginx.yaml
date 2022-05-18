@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-app
-  namespace: test
+  name: zack-fleet-test
   labels:
-    app: example-app
+    app: zack-fleet-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: example-app
+      app: zack-fleet-test
   template:
     metadata:
       labels:
-        app: example-app
+        app: zack-fleet-test
     spec:
       containers:
-        - name: example-app
+        - name: zack-fleet-test
           image: nginx:latest
           ports:
             - containerPort: 8080
